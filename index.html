@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
     <title>Bài Tập Cá Nhân</title>
   </head>
   <body>
@@ -33,71 +29,73 @@
           <h2 class="title">đăng ký học phần</h2>
           <!-------------- FORM ĐĂNG KÝ --------------->
           <div class="form">
-            <div class="form-content">
-              <label for="">Mã số: </label>
-              <input type="tel" class="input-1" />
-            </div>
-            <div class="form-content">
-              <label for="">Họ và tên: </label>
-              <input type="text" class="input-1" />
-            </div>
-            <div class="form-content">
-              <label for="">Địa chỉ: </label>
-              <input type="text" class="input-1" />
-            </div>
-            <div class="form-content">
-              <label for="">Điện thoại: </label>
-              <input type="tel" class="input-1" />
-            </div>
-            <div class="form-content form-content-1">
-              <label for="">Giới tính: </label>
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Nam</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="fmale">Nữ</label>
-            </div>
-            <div class="form-content">
-              <label for="">Điện thoại: </label>
-              <input type="date" class="input-1" />
-            </div>
-            <div class="form-content">
-              <label for="">Email: </label>
-              <input type="text" class="input-1" />
-            </div>
+            <form action="#">
+              <div class="form-content">
+                <label for="mssv">Mã số: </label>
+                <input type="tel" class="input-1" id="mssv" required />
+              </div>
+              <div class="form-content">
+                <label for="name">Họ và tên: </label>
+                <input type="text" class="input-1" id="name" required />
+              </div>
+              <div class="form-content">
+                <label for="add">Địa chỉ: </label>
+                <input type="text" class="input-1" id="add" required />
+              </div>
+              <div class="form-content">
+                <label for="phone">Điện thoại: </label>
+                <input type="tel" class="input-1" id="phone" required />
+              </div>
+              <div class="form-content form-content-1">
+                <label for="gender">Giới tính: </label>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Nữ</label>
+              </div>
+              <div class="form-content">
+                <label for="date">Ngày sinh: </label>
+                <input type="date" class="input-1" id="date" required />
+              </div>
+              <div class="form-content">
+                <label for="email">Email: </label>
+                <input type="text" class="input-1" id="email" required />
+              </div>
+            </form>
           </div>
           <!-------------------------- PHẦN MÔN HỌC ------------->
           <div class="course">
             <div class="course-1">
               <p class="text-1">Các môn học</p>
-              <div class="courses">
-                <div class="bg-gray">Lập Trình Hướng Đối Tượng</div>
-                <div class="bg-gray">Cấu Trúc Dữ Liệu</div>
-                <div class="bg-orange">Lập Trình Windows</div>
-                <div class="bg-gray">NM Công Nghệ Phần Mềm</div>
-                <div class="bg-orange">Trí Tuệ Nhân Tạo</div>
-                <div class="bg-orange">Phát Triển Ứng Dụng Web</div>
-                <div class="bg-gray">Cơ Sở Dữ Liệu</div>
+              <div class="courses" id="courses-left">
+                <div class="sub bg-gray">Lập Trình Hướng Đối Tượng</div>
+                <div class="sub bg-gray">Cấu Trúc Dữ Liệu</div>
+                <div class="sub bg-orange">Lập Trình Windows</div>
+                <div class="sub bg-gray">NM Công Nghệ Phần Mềm</div>
+                <div class="sub bg-orange">Trí Tuệ Nhân Tạo</div>
+                <div class="sub bg-orange">Phát Triển Ứng Dụng Web</div>
+                <div class="sub bg-gray">Cơ Sở Dữ Liệu</div>
               </div>
             </div>
             <div class="course-2">
-              <button class="btn">›</button>
-              <button class="btn">»</button>
-              <button class="btn">‹</button>
-              <button class="btn">«</button>
+              <button class="btn" id="nut1">›</button>
+              <button class="btn" id="nut2">»</button>
+              <button class="btn" id="nut3">‹</button>
+              <button class="btn" id="nut4">«</button>
             </div>
             <div class="course-3">
               <p class="text-3">Các môn học đã chọn</p>
-              <div class="courses">
-                <div class="bg-yellow">Nhập Môn Lập Trình</div>
-                <div class="bg-orange">Kỹ Thuật Lập Trình</div>
-                <div class="bg-yellow">Lập Trình Ứng Dụng Java</div>
+              <div class="courses" id="courses-right">
+                <div class="sub bg-yellow">Nhập Môn Lập Trình</div>
+                <div class="sub bg-orange">Kỹ Thuật Lập Trình</div>
+                <div class="sub bg-yellow">Lập Trình Ứng Dụng Java</div>
               </div>
             </div>
           </div>
           <!--------------- PHẦN NÚT ĐĂNG KÝ, XÓA HẾT --------------->
           <div class="btns">
-            <button class="btn btn-1">Đăng ký</button>
-            <button class="btn btn-1">Xóa hết</button>
+            <button class="btn btn-1" id="btn-dangky">Đăng ký</button>
+            <button class="btn btn-1" id="btn-xoahet">Xóa hết</button>
           </div>
           <!---------------- Bảng sinh viên ------------------------->
           <div class="students">
@@ -145,46 +143,52 @@
             <h3 class="news-title">
               <div class="icons">
                 <div class="caret right"></div>
-                <i class="uil uil-arrows-v"></i>
+                ↕
               </div>
               NEWS 01
             </h3>
             <p class="news-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab vero
-              maiores perspiciatis ad quisquam consequuntur saepe vitae,
-              dignissimos tempore hic!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium veritatis minima similique voluptatem natus aperiam
+              corporis soluta a asperiores aspernatur, fugit, delectus rem
+              maiores earum sint quia officia facilis unde?
             </p>
           </div>
           <div class="news">
             <h3 class="news-title">
               <div class="icons">
                 <div class="caret right"></div>
-                <i class="uil uil-arrows-v"></i>
+                ↕
               </div>
               NEWS 02
             </h3>
             <p class="news-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, odit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium veritatis minima similique voluptatem natus aperiam
+              corporis soluta a asperiores aspernatur, fugit, delectus rem
+              maiores earum sint quia officia facilis unde?
             </p>
           </div>
           <div class="news">
             <h3 class="news-title">
               <div class="icons">
                 <div class="caret right"></div>
-                <i class="uil uil-arrows-v"></i>
+                ↕
               </div>
               NEWS 03
             </h3>
             <p class="news-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-              placeat. Sint aliquid earum perferendis voluptatum!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium veritatis minima similique voluptatem natus aperiam
+              corporis soluta a asperiores aspernatur, fugit, delectus rem
+              maiores earum sint quia officia facilis unde?
             </p>
           </div>
           <div class="news">
             <h3 class="news-title">
               <div class="icons">
                 <div class="caret right"></div>
-                <i class="uil uil-arrows-v"></i>
+                ↕
               </div>
               NEWS 04
             </h3>
