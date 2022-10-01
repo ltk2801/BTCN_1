@@ -39,8 +39,9 @@ const dangky = document.getElementById("btn-dangky");
 const xoa = document.getElementById("btn-xoahet");
 
 function FormValidate() {
+  let error = 0;
   let regexMaSo = /(17|18|19|20|21|22)+([0-9]{6})\b/g;
-  let regexTen = /^[a-Z0-9_-](\w|\s){1,}$/gm;
+  let regexTen = /^[a-zA-Z0-9_-](\w|\s){1,}$/gm;
   let regexDiaChi = /^[a-z0-9_-](\w|\s){1,}$/gm;
   let regexPhone = /(0)+([0-9]{9})\b/g;
   let regexEmail =
@@ -49,32 +50,40 @@ function FormValidate() {
   // kiểm tra mã số
   if (maso.value == "" || maso.value == null) {
     maso.classList.add("error");
+    error += 1;
   } else if (!regexMaSo.test(maso.value)) {
     maso.classList.add("error");
+    error += 1;
   } else {
     maso.classList.remove("error");
   }
   // Kiểm tra tên
   if (ten.value == "" || ten.value == null) {
     ten.classList.add("error");
+    error += 1;
   } else if (!regexTen.test(ten.value)) {
     ten.classList.add("error");
+    error += 1;
   } else {
     ten.classList.remove("error");
   }
   // Kiểm tra địa chỉ
   if (dchi.value == "" || dchi.value == null) {
     dchi.classList.add("error");
+    error += 1;
   } else if (!regexDiaChi.test(dchi.value)) {
     dchi.classList.add("error");
+    error += 1;
   } else {
     dchi.classList.remove("error");
   }
   // Kiểm tra điện thoại
   if (phone.value == "" || phone.value == null) {
     phone.classList.add("error");
+    error += 1;
   } else if (!regexPhone.test(phone.value)) {
     phone.classList.add("error");
+    error += 1;
   } else {
     phone.classList.remove("error");
   }
@@ -86,26 +95,38 @@ function FormValidate() {
     (nu.checked == "" || nu.checked == null)
   ) {
     alert("Vui lòng chọn giới tính ! ");
+    error += 1;
   }
   // Kiểm tra ngày
   if (date.value == "" || date.value == null) {
     date.classList.add("error");
+    error += 1;
   } else {
     date.classList.remove("error");
   }
   // Kiểm tra email
   if (email.value == "" || email.value == null) {
     email.classList.add("error");
+    error += 1;
   } else if (!regexEmail.test(email.value)) {
     email.classList.add("error");
+    error += 1;
   } else {
     email.classList.remove("error");
   }
-  return false;
+  return error;
 }
 
 dangky.addEventListener("click", function () {
   FormValidate();
+  let check = FormValidate();
+  if (check == 0) {
+    $("table").append(
+      `<tr><td>${maso.value}</td><td>${ten.value}</td><td>${
+        nam.checked ? "Nam" : "Nữ"
+      }</td><td>${date.value}</td></tr>`
+    );
+  }
 });
 
 xoa.addEventListener("click", function () {
