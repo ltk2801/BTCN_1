@@ -40,7 +40,7 @@ const xoa = document.getElementById("btn-xoahet");
 
 function FormValidate() {
   let regexMaSo = /(17|18|19|20|21|22)+([0-9]{6})\b/g;
-  let regexTen = /^[a-z0-9_-](\w|\s){1,}$/gm;
+  let regexTen = /^[a-Z0-9_-](\w|\s){1,}$/gm;
   let regexDiaChi = /^[a-z0-9_-](\w|\s){1,}$/gm;
   let regexPhone = /(0)+([0-9]{9})\b/g;
   let regexEmail =
