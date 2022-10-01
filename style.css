@@ -5,8 +5,9 @@
 }
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
+/* header */
 .header {
   height: 6em;
   display: flex;
@@ -17,15 +18,17 @@
   box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 5px;
+  margin-bottom: 3rem;
 }
 .header h1 {
-  font-size: 34px;
+  font-size: 32px;
   text-align: center;
   letter-spacing: 0.2em;
   color: #b8e4ec;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 0px 0px 3px black;
   font-weight: bold;
 }
+/* /navbar/ */
 .navbar ul li {
   list-style-type: none;
   display: inline-block;
@@ -34,7 +37,7 @@
 .navbar ul li a {
   color: #5e9cf1;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 .navbar {
   position: absolute;
@@ -42,12 +45,205 @@
   border-radius: 5px;
   bottom: 0%;
   transform: translateY(70%);
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .navbar ul li a:hover,
 a:active {
   color: #ffbf55;
   font-weight: lighter;
-  text-shadow: 1px 0 1px #f7ce8d;
+  text-shadow: 1px 0px 1px #f7ce8d;
   cursor: grab;
+  background-color: #a8c7f3;
+}
+/* content */
+.content {
+  display: grid;
+  grid-template-columns: auto 360px;
+  align-items: start;
+  gap: 10px;
+  border-top: 2px solid #5e9cf1;
+  border-bottom: 2px solid #5e9cf1;
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+}
+.main {
+  border-right: 2px dotted #54d2ef;
+  padding-right: 10px;
+}
+
+.title {
+  text-align: center;
+  color: #ffa955;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #4d4c4c;
+}
+.form {
+  text-align: end;
+}
+.form .input-1 {
+  width: 50%;
+  border: 1px solid #4d4c4c;
+  padding: 1px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.form-content {
+  margin-top: 1em;
+}
+.form-content-1 {
+  text-align: center;
+  margin-left: 30px;
+}
+#male {
+  margin-right: 5px;
+}
+#female {
+  margin-left: 5px;
+}
+.course {
+  display: grid;
+  grid-template-columns: auto 50px auto;
+  margin: 0.5rem 0;
+}
+.text-1 {
+  text-align: end;
+  margin-bottom: 0.5rem;
+  color: #f5810d;
+  font-weight: bold;
+  font-size: 20px;
+}
+.text-3 {
+  margin-bottom: 0.5rem;
+  color: #f5810d;
+  font-weight: bold;
+  font-size: 20px;
+}
+.course-2 {
+  justify-self: center;
+  align-self: center;
+}
+.btn {
+  display: block;
+  width: 30px;
+  background-color: white;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #5e9cf1;
+  border: 1px solid rgb(248, 100, 46);
+  border-radius: 4px;
+  font-size: 18px;
+}
+.btn-1 {
+  width: 80px;
+  font-weight: bold;
+  padding: 2px 4px;
+  font-size: 14px;
+}
+.courses {
+  padding: 10px;
+  border: 1px solid #f0eeee;
+  height: 300px;
+}
+.courses div {
+  border: 1px solid #4d4c4c;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.courses div:last-child {
+  margin: 0;
+}
+.bg-gray {
+  background-color: #f8f9fa;
+}
+.bg-orange {
+  background-color: #ffa515;
+  color: white;
+}
+.bg-yellow {
+  background-color: #fdffb6;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid #4d4c4c;
+  padding-bottom: 0.5rem;
+}
+/* table student */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+td,
+th {
+  border-right: 3px solid white;
+  padding: 4px;
+  text-align: center;
+}
+tbody tr td:nth-child(2) {
+  text-align: left;
+}
+thead tr {
+  background-color: #ff8206;
+  color: white;
+}
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffcf7e;
+}
+/*Side*/
+.side {
+}
+.news {
+  margin-top: 0.5rem;
+  border: 1px solid #dbd8d8;
+}
+.news-title {
+  background-color: #ff8206;
+  color: white;
+  padding: 10px;
+  border: 1px solid #5e9cf1;
+}
+.news-content {
+  padding: 2rem;
+  line-height: 1.5;
+  color: #2d80f3;
+  /* display: none; */
+}
+/* footer  */
+footer {
+  text-align: center;
+  background-color: #fddea8;
+  padding: 5px 0;
+  border: 2px solid #fca315;
+  color: #fca315;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-menu a {
+  color: #f7ad37;
+  padding: 2px 10px;
+  border-right: 1px solid #f7ad37;
+  margin-right: 10px;
+}
+.footer-menu a:last-child {
+  border: none;
+}
+
+.footer-menu a:hover,
+a:active {
+  color: white;
+  background-color: #ffa955;
 }
